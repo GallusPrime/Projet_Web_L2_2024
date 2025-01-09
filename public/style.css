@@ -1,5 +1,13 @@
 body{
-    background-image: url("https://media.istockphoto.com/id/1136267636/fr/vid%C3%A9o/shenzhen-ville-c%C3%A9l%C3%A8bre-centre-commercial-int%C3%A9rieur-panorama-de-marche-4k-timelapse-chine.jpg?s=640x640&k=20&c=oJrkDzzGoYhtP3m9HfwmzPy444V6X9brMxWQubQBUt0=");
+    background-image:url("/Projet_Web_L2_2024/public/leBackgroundStatic.jpg");
     background-attachment: fixed;
     background-size: 1300px 700px;
+    z-index: 10;
+}
+body {
+    background-image: url("/Projet_Web_L2_2024//public/RectangleRouge.svg");
+    background-size: cover, 1300px 700px;
+    background-position: center, center;
+    background-attachment: scroll;
+    z-index: 20;
 }
