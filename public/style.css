@@ -74,8 +74,10 @@ div {
 footer {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 100%;
     background-color: white;
     padding: 10px 10px 10px 150px;
+    position: relative;
 
 }
 .footer-centre {
@@ -85,7 +87,8 @@ footer {
 }
 .footer-centre ul {
     list-style: none;
-    padding-right: 50px;
+    margin: 0;
+    padding: 0;
 }
 
 .footer-droite {
@@ -94,8 +97,21 @@ footer {
     margin-left: 150px;
 }
 .Plogo {
-    border : 2px solid black;
+    border: 2px solid black;
     border-radius: 5px;
+    display: inline-block;
+    padding: 3px;
+    transition: transform 0.3s ease;
+}
+
+.Plogo img {
+    width: 10px;
+    height: 10px;
+    object-fit: contain;
+}
+
+.Plogo:hover {
+    transform: translateY(-4px);
 }
 #mail {
     border : 2px solid black;
@@ -109,6 +125,13 @@ footer {
 }
 .footer-gauche span {
     margin-right: 5px;
+}
+.mini-bas {
+    font-size: 10px;
+    text-align: center;
+    align-self: end;
+    position: absolute;
+    bottom: 10px;
 }
 .Tel {
     border : 2px solid lightgray;
