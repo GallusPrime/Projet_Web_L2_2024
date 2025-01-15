@@ -70,3 +70,55 @@ div {
     grid-column: 7;
     grid-row: 1;
 }
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    background-color: white;
+    padding: 10px 10px 10px 150px;
+
+}
+.footer-centre {
+    text-align: left;
+    margin-left: 50px;
+
+}
+.footer-centre ul {
+    list-style: none;
+    padding-right: 50px;
+}
+
+.footer-droite {
+    margin-top: 10px;
+    text-align: left;
+    margin-left: 150px;
+}
+.Plogo {
+    border : 2px solid black;
+    border-radius: 5px;
+}
+#mail {
+    border : 2px solid black;
+    border-radius: 15px;
+    width: 40%;
+
+}
+.footer-gauche {
+    margin-left: 100px;
+    text-align: left
+}
+.footer-gauche span {
+    margin-right: 5px;
+}
+.Tel {
+    border : 2px solid lightgray;
+    border-radius: 5px;
+    gap: 5px;
+}
+
+.email {
+    border : 2px solid black;
+    border-radius: 5px;
+}
+
+
