@@ -201,3 +201,46 @@ footer {
     margin-right: 50px;
 }
 
+
+.bar-fixé {
+    position: fixed;
+    top: 60%;
+    left: 10%;
+    transform: translateY(-50%); /* peut être a enlever */
+    padding: 10px 10px;
+    text-align: center;
+    z-index: 100000000;
+}
+
+
+.vertical-txt {
+    writing-mode: vertical-rl; /* Rend le texte vertical */
+    transform: rotate(180deg); /* Inverse le sens du texte */
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px; /* Espace entre le texte et les icônes */
+    color: black;
+}
+
+
+.icones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.icone img {
+    width: 10px;
+    height: 10px;
+    object-fit: contain;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 2px;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+.icone img:hover {
+    transform: translateX(4px);
+}
+
