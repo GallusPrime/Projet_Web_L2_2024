@@ -116,6 +116,7 @@ div {
     z-index: 1;
 }
 
+/*footer*/
 footer {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
@@ -200,8 +201,9 @@ footer {
     object-fit: contain;
     margin-right: 50px;
 }
+/*footer fin*/
 
-
+/*bar fix*/
 .bar-fixé {
     position: fixed;
     top: 60%;
@@ -243,4 +245,43 @@ footer {
 .icone img:hover {
     transform: translateX(4px);
 }
+/*bar fix fin*/
+
+/*boitejaune*/
+.boitejaune {
+    background-color: yellow;
+    border-radius: 12px;
+    padding: 40px;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.boitejaune h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.votreemail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.votreemail input {
+    padding: 10px 15px;
+    border: 2px solid black;
+    border-radius: 25px;
+    font-size: 15px;
+    flex: 1;
+    max-width: 300px;
+}
+
+.minitxt {
+    font-size: 14px;
+}
+/*boite jaune fin*/
 
