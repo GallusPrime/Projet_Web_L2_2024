@@ -13,6 +13,7 @@ body {
     z-index: 20;
 }
 
+/*header*/
 header {
     background-color: white;
     position: fixed;
@@ -65,13 +66,13 @@ div {
 }
 
 .horaire-text {
-    background-color: yellow;
+    background-color: #F8DF00;
     padding: 10px;
     border-radius: 10px;
 }
 
 .horaires {
-    background-color: yellow;
+    background-color: #F8DF00;
     padding: 10px;
     border-radius: 10px;
     display: none;
@@ -114,6 +115,69 @@ div {
     white-space: nowrap;
     position: relative;
     z-index: 1;
+}
+
+/*carrés*/
+.carres{
+    display: grid;
+    gap: 75px;
+    grid-auto-columns: 100px;
+    justify-content: center;
+}
+
+.carres div{
+    border: 3px solid white;
+    border-radius: 5px;
+    height: 100px;
+    width: 100px;
+    padding: 20px;
+    transition: 0.5s ease-out;
+    color: white;
+}
+.carres p{
+    margin-top: 10px;
+    padding-top: 0px;
+    font-size: 15px;
+}
+
+.carres img{
+    height: 50px;
+}
+
+.carres div:hover + img{
+    filter: invert(100%);
+}
+
+.carres div:hover{
+    color: black;
+    background-color: white;
+    transition: 0.5s ease-out;
+    transform: translate(0px, -5px);
+}
+
+.objets_trouves{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.acces{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.plan_du_centre{
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.accessibilite{
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.plus_de_services{
+    grid-column: 5;
+    grid-row: 1;
 }
 
 /*footer*/
@@ -249,7 +313,7 @@ footer {
 
 /*boitejaune*/
 .boitejaune {
-    background-color: yellow;
+    background-color: #F8DF00;
     border-radius: 12px;
     padding: 40px;
     width: 60%;
