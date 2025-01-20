@@ -207,16 +207,14 @@ footer {
     margin-left: 150px;
 }
 .Plogo {
-    border: 2px solid black;
-    border-radius: 5px;
     display: inline-block;
     padding: 3px;
     transition: transform 0.3s ease;
 }
 
 .Plogo img {
-    width: 10px;
-    height: 10px;
+    width: 30px;
+    height: 30px;
     object-fit: contain;
 }
 
@@ -258,6 +256,7 @@ footer {
 .email {
     border : 2px solid black;
     border-radius: 5px;
+
 }
 .email img {
     width: 10px;
@@ -296,13 +295,10 @@ footer {
 }
 
 .icone img {
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     object-fit: contain;
-    border: 2px solid black;
-    border-radius: 5px;
     padding: 2px;
-    background-color: white;
     transition: transform 0.3s ease;
 }
 
@@ -348,4 +344,51 @@ footer {
     font-size: 14px;
 }
 /*boite jaune fin*/
+
+/*carre transparent*/
+.carres_transparent{
+    display: grid;
+    gap: 75px;
+    grid-auto-columns: 100px;
+    justify-content: center;
+}
+
+.carres_transparent div{
+    border: 3px solid white;
+    border-radius: 5px;
+    height: 100px;
+    width: 100px;
+    padding: 20px;
+    transition: 0.5s ease-out;
+    color: white;
+}
+.carres_transparent p{
+    margin-top: 10px;
+    padding-top: 0px;
+    font-size: 15px;
+}
+
+.carres_transparent img{
+    height: 50px;
+}
+
+.carres_transparent div:hover + img{
+    filter: invert(100%);
+}
+
+.carres_transparent div:hover{
+    color: black;
+    background-color: red;
+    transition: 0.5s ease-out;
+    transform: translate(0px, -5px);
+}
+
+/*carre transparent fin*/
+
+
+/*divers*/
+arrow {
+
+}
+/*fin divers*/
 
