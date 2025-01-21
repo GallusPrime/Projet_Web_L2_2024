@@ -17,8 +17,9 @@ body {
 header {
     background-color: white;
     position: fixed;
+    top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 10000000000000;
 }
 
 .ensemble {
@@ -391,4 +392,90 @@ arrow {
 
 }
 /*fin divers*/
+
+/*slider martin*/
+#superactu {
+    margin-top: 500px;
+    margin-bottom: 150px;
+}
+
+.actus {
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    inline-size: auto;
+    border: 3px solid white;
+}
+.bouton_actus {
+    grid-column: 3;
+}
+
+.bonPlan {
+    display: grid;
+    grid-template-columns: 2fr 1fr 3fr 1fr;
+    inline-size: auto;
+    border: 3px solid white;
+}
+
+.arrow {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+}
+.progress-bar {
+    margin-top: 10px;
+    height: 5px;
+    background-color: lightgrey;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.progress-indicator {
+    height: 100%;
+    background-color: white;
+    width: 0%; /* Mise à jour via JS */
+    transition: width 0.5s ease;
+}
+
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background-color: red;
+    padding: 20px 0;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 calc(25% - 20px); /* 4 slides visibles */
+    max-width: calc(25% - 20px);
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+
+
+
+
+/*fin slider martin*/
 
