@@ -33,17 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Fonction pour synchroniser le défilement manuel et la progression
-    carousel.addEventListener('scroll', () => {
-        const scrollLeft = carousel.scrollLeft; // Position de défilement horizontale
-        const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth; // Défilement maximum possible
-
-        // Calculer la progression en pourcentage
-        const progressPercentage = (scrollLeft / maxScrollLeft) * 100;
-
-        // Mettre à jour la barre de progression
-        progressIndicator.style.width = `${progressPercentage}%`;
-    });
 
     // Ajuster la position du carrousel lors du redimensionnement
     window.addEventListener('resize', () => {
