@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-
     // Ajuster la position du carrousel lors du redimensionnement
     window.addEventListener('resize', () => {
         updateCarousel();

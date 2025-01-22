@@ -31,7 +31,7 @@ header {
 
 div {
     text-align: center;
-    font-family: Papyrus;
+    font-family: "AlbertSans-Bold", sans-serif;
 }
 
 .logo {
@@ -534,21 +534,29 @@ arrows {
 
 /*liste sponsor*/
 .liste_sponsor {
-    max-height: 120px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 120px;
     display: flex;
     overflow-x: auto;
+    scrollbar-width: none;
 }
 
 .liste_sponsor::-webkit-scrollbar {
     width: 0;
+    display: none;
 }
 .liste_sponsor .sponsor {
-    min-width: 110px;
-    height: 110px;
+    min-width: 150px;
+    object-fit: contain;
     line-height: 110px;
     text-align: center;
     background-color: white;
     margin-right: 10px;
+}
+.liste_sponsor img {
+    width: 100%;
+    height: 100%;
 }
 
 /*fin liste sponsor*/
