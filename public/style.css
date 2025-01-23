@@ -119,6 +119,32 @@ div {
     z-index: 1;
 }
 
+/*premier slider*/
+
+.slider {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 500px;
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    width: 100%;
+}
+
+.slider div{
+    padding: 10px;
+    border-radius: 2%;
+}
+
+.slider img{
+    max-height: 500px;
+}
+
+.slider::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}
+
 /*carrés*/
 .carres{
     display: grid;
