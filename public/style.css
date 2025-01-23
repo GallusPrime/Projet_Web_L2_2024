@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 body{
     background-image:url("/Projet_Web_L2_2024/public/leBackgroundStatic.jpg");
     background-attachment: fixed;
@@ -52,6 +54,7 @@ div {
     padding: 30px 0;
     grid-column: 3;
     grid-row: 1;
+    min-width: 100px;
 }
 
 .info {
@@ -147,14 +150,19 @@ div {
 
 /*carrés*/
 .carres{
-    display: grid;
+    display: flex;
     gap: 75px;
     grid-auto-columns: 100px;
+    align-items: center;
     justify-content: center;
     margin-top: 150px;
 }
 
 .carres div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border: 3px solid white;
     border-radius: 5px;
     height: 100px;
@@ -162,6 +170,7 @@ div {
     padding: 20px;
     transition: 0.5s ease-out;
     color: white;
+    z-index: 1;
 }
 .carres p{
     margin-top: 10px;
@@ -169,12 +178,20 @@ div {
     font-size: 15px;
 }
 
+.red{
+    display: none;
+}
+
 .carres img{
     height: 50px;
 }
 
-.carres div:hover + img{
-    filter: invert(100%);
+.carres div:hover .white{
+    display: none;
+}
+
+.carres div:hover .red{
+    display: block;
 }
 
 .carres div:hover{
@@ -182,31 +199,6 @@ div {
     background-color: white;
     transition: 0.5s ease-out;
     transform: translate(0px, -5px);
-}
-
-.objets_trouves{
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.acces{
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.plan_du_centre{
-    grid-column: 3;
-    grid-row: 1;
-}
-
-.accessibilite{
-    grid-column: 4;
-    grid-row: 1;
-}
-
-.plus_de_services{
-    grid-column: 5;
-    grid-row: 1;
 }
 
 /*footer*/
@@ -547,16 +539,49 @@ arrows {
     background: white;
     border-radius: 8px;
     overflow: hidden;
-    text-align: center;
+    text-align: left;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
 }
 
 .slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
 }
-/*fin slider martin*/
+
+.date{
+    font-family: "Albert Sans", sans-serif;
+    font-size: 12px;
+    margin-top: 97%;
+    margin-left: 30px;
+    color: lightgray;
+    z-index: 10;
+}
+
+.slide-text{
+    font-family: "Albert Sans", sans-serif;
+    font-size: 25px;
+    margin-left: 30px;
+    color: white;
+    z-index: 10;
+}
+
+.hashtag{
+    font-family: "Albert Sans", sans-serif;
+    font-size: 12px;
+    margin-top: 32px;
+    margin-left: 30px;
+    color: white;
+    z-index: 10;
+}
+
+.black-bg{
+    background-color: black;
+    max-width: fit-content;
+}
+/*fin slider*/
 
 /*liste sponsor*/
 .liste_sponsor {
