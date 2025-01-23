@@ -40,4 +40,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialisation
     updateCarousel();
+
+    /*test*/
+    const slider = document.querySelector('.sliderImg');
+    const points = document.querySelectorAll('.points a');
+    const images = document.querySelectorAll('.sliderImg img');
+
+// Synchroniser les points avec les images
+    points.forEach((point, index) => {
+        point.addEventListener('click', (e) => {
+            e.preventDefault();
+            slider.scrollTo({
+                left: images[index].offsetLeft,
+                behavior: 'smooth',
+            });
+        });
+    });
+
+// Mettre en évidence le point actif en fonction de l'image visible
+    slider.addEventListener('scroll', () => {
+        const scrollPosition = slider.scrollLeft;
+        images.forEach((image, index) => {
+            if (Math.round(image.offsetLeft - scrollPosition) === 0) {
+                points.forEach((point) => point.style.opacity = '0.75');
+                points[index].style.opacity = '1';
+            }
+        });
+    });
+    /*fin test*/
 });
+
