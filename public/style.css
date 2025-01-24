@@ -433,7 +433,7 @@ footer {
 
 /*carre transparent*/
 .carres_transparent{
-    display: grid;
+    display: flex;
     gap: 75px;
     grid-auto-columns: 100px;
     justify-content: center;
@@ -463,7 +463,6 @@ footer {
 }
 
 .carres_transparent div:hover{
-    color: black;
     background-color: red;
     transition: 0.5s ease-out;
     transform: translate(0px, -5px);
