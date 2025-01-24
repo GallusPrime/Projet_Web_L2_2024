@@ -253,21 +253,19 @@ div {
 /*footer*/
 footer {
     display: grid;
+    height: 25rem;
     grid-template-columns: 1fr 1fr 2fr;
     grid-template-rows: 100%;
     background-color: white;
-    padding: 10px 10px 10px 150px;
+    padding: 20px 10px 10px 150px;
     position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
+    font-size: 14px;
 }
 
 .footer-centre {
     text-align: left;
     margin-left: 50px;
-    margin-bottom: 100px;
+    padding-top: 34px;
 
 }
 .footer-centre ul {
@@ -277,9 +275,14 @@ footer {
 }
 
 .footer-droite {
-    margin-top: 10px;
     text-align: left;
     margin-left: 150px;
+    padding-top: 46px;
+}
+.footer-droite i {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
 }
 .Plogo {
     display: inline-block;
@@ -296,23 +299,21 @@ footer {
 .Plogo:hover {
     transform: translateY(-4px);
 }
-#mail {
-    border : 2px solid black;
-    border-radius: 15px;
-    width: 40%;
 
-}
 .footer-gauche {
     margin-left: 100px;
-    text-align: left
+    text-align: left;
+
 }
+
 .footer-gauche h2 {
     font-size: 50px;
-    padding-bottom: 10px
 }
+
 .footer-gauche span {
-    margin-right: 5px;
+    margin: 0 25px 15px 5px;
 }
+
 .mini-bas {
     font-size: 10px;
     text-align: center;
@@ -322,31 +323,64 @@ footer {
 }
 .Tel {
     border : 2px solid lightgray;
-    border-radius: 5px;
+    border-radius: 8px;
     gap: 5px;
+    padding : 5px;
+    width: 70%;
+    font-size: 16px;
+
 }
 .Tel img {
-    width: 10px;
-    height: 10px;
     object-fit: contain;
-    margin-right: 40px;
+}
+.Tel  {}
+
+.mail{
+    border : 2px solid black;
+    border-radius: 8px;
+    gap: 5px;
+    width: 60%;
+    padding : 5px;
+    font-size: 16px;
+}
+.mail img {
+    object-fit: contain;
+
 }
 
 .email {
     display: flex;
     justify-content: left;
-    align-items: center;
-    margin-bottom: 20px;
-    gap: 10px;
-}
-.email input {
-    padding: 10px 15px;
     border: 2px solid black;
     border-radius: 25px;
-    font-size: 15px;
-    flex: 1;
+    padding: 5px 10px;
     max-width: 300px;
 }
+
+.email input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.email button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.email button img {
+    width: 20px;
+    height: 20px;
+    transition: 0.5s ease-out;
+}
+.email button img:hover {
+    transform: translateX(8px);
+}
+
 #partage{
     color: red;
 }
@@ -543,11 +577,7 @@ footer {
 /*carre transparent fin*/
 
 
-/*divers*/
-arrows {
 
-}
-/*fin divers*/
 
 /*slider martin*/
 #superactu {
@@ -664,30 +694,55 @@ arrows {
 /*fin slider*/
 
 /*liste sponsor*/
-.liste_sponsor {
+.logo_slide {
+    padding-top:20px;
     margin-top: 50px;
-    margin-bottom: 50px;
-    height: 120px;
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+    position: relative; /* Conteneur pour le positionnement des éléments */
     display: flex;
-    overflow-x: auto;
-    scrollbar-width: none;
+    align-items: center;
 }
 
-.liste_sponsor::-webkit-scrollbar {
-    width: 0;
-    display: none;
+.liste_logo {
+    display: flex;
+    animation: scroll 14s linear infinite; /* Animation continue */
+    width: calc(var(--width) * var(--quantity) * 2); /* Doubler la largeur pour le scroll infini */
+    gap: 20px; /* Ajoute un espacement plus important entre les items */
 }
-.liste_sponsor .sponsor {
-    min-width: 150px;
-    object-fit: contain;
-    line-height: 110px;
-    text-align: center;
-    background-color: white;
-    margin-right: 10px;
+
+.liste_logo .item {
+    flex-shrink: 0; /* Empêche les items de se réduire */
+    width: var(--width);
+    height: var(--height);
+    transition: transform 0.3s ease; /* Transition fluide pour l'effet de hover */
 }
-.liste_sponsor img {
-    width: 100%;
-    height: 100%;
+
+.liste_logo .item img {
+    width: 80%; /* Réduction de la taille de l'image à l'intérieur pour un meilleur espacement */
+    height: 80%;
+    object-fit: contain; /* Ajuste l'image sans déformation */
+
+}
+
+/* Animation pour le scroll infini */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-1 * var(--width) * var(--quantity)));
+    }
+}
+
+/* Effet au survol */
+.logo_slide:hover .liste_logo {
+    animation-play-state: paused; /* Pause l'animation */
+}
+.liste_logo .item:hover {
+    transform: scale(1.1); /* Agrandit légèrement l'item au survol */
+    z-index: 1; /* Place l'item au-dessus des autres lors du survol */
 }
 
 /*fin liste sponsor*/
