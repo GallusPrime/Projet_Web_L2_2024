@@ -5,6 +5,7 @@ body{
     background-attachment: fixed;
     background-size: 1300px 700px;
     z-index: 10;
+    margin: 0;
 }
 
 body {
@@ -257,11 +258,16 @@ footer {
     background-color: white;
     padding: 10px 10px 10px 150px;
     position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
 }
+
 .footer-centre {
     text-align: left;
     margin-left: 50px;
+    margin-bottom: 100px;
 
 }
 .footer-centre ul {
@@ -300,6 +306,10 @@ footer {
     margin-left: 100px;
     text-align: left
 }
+.footer-gauche h2 {
+    font-size: 50px;
+    padding-bottom: 10px
+}
 .footer-gauche span {
     margin-right: 5px;
 }
@@ -323,15 +333,22 @@ footer {
 }
 
 .email {
-    border : 2px solid black;
-    border-radius: 5px;
-
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
 }
-.email img {
-    width: 10px;
-    height: 10px;
-    object-fit: contain;
-    margin-right: 50px;
+.email input {
+    padding: 10px 15px;
+    border: 2px solid black;
+    border-radius: 25px;
+    font-size: 15px;
+    flex: 1;
+    max-width: 300px;
+}
+#partage{
+    color: red;
 }
 /*footer fin*/
 
@@ -450,6 +467,21 @@ footer {
     background-color: red;
     transition: 0.5s ease-out;
     transform: translate(0px, -5px);
+}
+.fauteuil{
+    grid-column: 1/5;
+}
+.cafe{
+    grid-column: 2/5;
+}
+.vetement{
+    grid-column: 3/5;
+}
+.visage{
+    grid-column: 4/5;
+}
+.book{
+    grid-column: 5/5;
 }
 /*flemme*/
 .shopping-header {
