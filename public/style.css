@@ -3,18 +3,20 @@
 body{
     background-image:url("/Projet_Web_L2_2024/public/leBackgroundStatic.jpg");
     background-attachment: fixed;
-    background-size: 1300px 700px;
-    z-index: 10;
+    background-size: cover;
+    background-position: center;
     margin: 0;
 }
-
-body {
-    background-image: url("/Projet_Web_L2_2024//public/RectangleRouge.svg");
-    background-size: cover, 1300px 700px;
-    background-position: center, center;
-    background-attachment: scroll;
-    z-index: 20;
+.background{
+    background-color: #EC1C24;
 }
+
+.background_bas{
+    background-color: #EC1C24;
+    background-position: bottom;
+    background-size: 50% 50%;
+}
+
 
 /*header*/
 header {
@@ -69,12 +71,14 @@ div {
     margin-left: 20px;
     grid-column: 6;
     grid-row: 1;
+    z-index: 2
 }
 
 .horaire-text {
     background-color: #F8DF00;
     padding: 10px;
     border-radius: 10px;
+    z-index: 2
 }
 
 .horaires {
@@ -82,6 +86,7 @@ div {
     padding: 10px;
     border-radius: 10px;
     display: none;
+    z-index: 2
 }
 
 .horaire-text:hover + .horaires {
@@ -115,6 +120,7 @@ div {
 }
 
 .stvalentin {
+    padding: 0.5rem;
     background-color: black;
     color : white;
     grid-row: 2;
@@ -125,7 +131,8 @@ div {
 
 /*premier slider*/
 .slider {
-    margin: 150px 0 0 0;
+    padding-top: 10rem;
+    margin: 0;
     justify-content: center;
     align-items: center;
     width: 100%; /* Prend toute la largeur de l'écran */
@@ -189,6 +196,7 @@ div {
 }
 
 /*premier slider fin*/
+
 /*carrés*/
 .carres{
     display: flex;
@@ -241,6 +249,444 @@ div {
     transition: 0.5s ease-out;
     transform: translate(0px, -5px);
 }
+/*fin carre*/
+
+/*slider martin*/
+#superactu {
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.actu{
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    inline-size: auto;
+}
+
+.actus_et{
+    margin-left: 2rem;
+    justify-self: left;
+    font-family: "AlbertSans", sans-serif;
+    font-size: 3rem;
+    color: white;
+    margin-bottom: -50px;
+}
+
+.bouton_actus {
+    white-space: none;
+    grid-column: 3;
+    background-color: white;
+    width: 15rem;
+    padding: 0.5rem;
+    color: #EC1C24;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bouton_actus:hover {
+    transition: 0.3s ease;
+    width: 15.5rem;
+}
+
+.bonPlan {
+    margin-left: 2rem;
+    font-size: 3rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr 3fr 1fr;
+    inline-size: auto;
+    margin-top: -20px;
+    color: transparent;
+    -webkit-text-stroke-width: 0.1rem;
+    -webkit-text-stroke-color: white;
+}
+
+.arrow {
+    margin-top: 60px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.left-arrow {
+    margin-left: 7rem;
+}
+
+.right-arrow {
+
+}
+.progress-bar {
+    margin-top: 76px;
+    margin-right: 55px;
+    height: 5px;
+    background-color: lightgrey;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.progress-indicator {
+    height: 100%;
+    background-color: white;
+    width: 0%; /* Mise à jour via JS */
+    transition: width 0.5s ease;
+}
+
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background-color: transparent;
+    padding: 20px 0;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 calc(25% - 20px); /* 4 slides visibles */
+    max-width: calc(25% - 20px);
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.date{
+    font-family: "Albert Sans", sans-serif;
+    font-size: 12px;
+    margin-top: 97%;
+    margin-left: 30px;
+    color: lightgray;
+    z-index: 10;
+}
+
+.slide-text{
+    font-family: "Albert Sans", sans-serif;
+    font-size: 25px;
+    margin-left: 30px;
+    color: white;
+    z-index: 10;
+}
+
+.hashtag{
+    font-family: "Albert Sans", sans-serif;
+    font-size: 12px;
+    margin-top: 32px;
+    margin-left: 30px;
+    color: white;
+    z-index: 10;
+}
+
+.black-bg{
+    background-color: black;
+    max-width: fit-content;
+}
+/*fin slider*/
+
+/*carre transparent*/
+.carres_transparent{
+    display: flex;
+    gap: 75px;
+    grid-auto-columns: 100px;
+    justify-content: center;
+}
+
+.carres_transparent div{
+    border: 3px solid white;
+    border-radius: 5px;
+    height: 100px;
+    width: 100px;
+    padding: 20px;
+    transition: 0.5s ease-out;
+    color: white;
+}
+.carres_transparent p{
+    margin-top: 10px;
+    padding-top: 0px;
+    font-size: 15px;
+}
+
+.carres_transparent img{
+    height: 50px;
+}
+
+.carres_transparent div:hover + img{
+    filter: invert(100%);
+}
+
+.carres_transparent div:hover{
+    background-color: #EC1C24;
+    transition: 0.5s ease-out;
+    transform: translate(0px, -5px);
+}
+.fauteuil{
+    grid-column: 1/5;
+}
+.cafe{
+    grid-column: 2/5;
+}
+.vetement{
+    grid-column: 3/5;
+}
+.visage{
+    grid-column: 4/5;
+}
+.book{
+    grid-column: 5/5;
+}
+/*flemme*/
+.shopping-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    padding: 20px 40px;
+    color: white;
+}
+
+
+.shopping-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.shopping-text .highlight {
+    color: transparent;
+    -webkit-text-stroke-width: 0.1rem;
+    -webkit-text-stroke-color: white;
+}
+
+.all-shops-button button {
+    background-color: white;
+    width: 180px;
+    height: 40px;
+    color: #EC1C24;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.all-shops-button button:hover {
+    transition: 0.3s ease;
+    width: 200px;
+}
+
+
+.shopping-footer {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    color: white;
+    margin-top: 20px;
+}
+
+.shopping-footer p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+
+
+/*carre transparent fin*/
+
+/*boitejaune*/
+.jaunetitre{
+    position: absolute;
+    font-size: 2.5rem;
+    color: white;
+    font-family: "AlbertSans-BoldItalic", sans-serif;
+    -webkit-text-stroke-width: 0.1rem;
+    -webkit-text-stroke-color: black;
+    margin-left: 23rem;
+    margin-top: 3.5rem;
+    font-style: italic;
+}
+
+.boitejaune {
+    font-family: "AlbertSans-Bold", sans-serif;
+    background-color: #F8DF00;
+    border-radius: 12px;
+    padding: 40px;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 100px;
+    height: 250px;
+}
+
+.boitejaune h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.votreemail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 5px 10px;
+    max-width: 300px;
+    margin-left: 380px;
+    margin-bottom: 40px;
+}
+
+.votreemail input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.votreemail button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.votreemail button img {
+    width: 20px;
+    height: 20px;
+    transition: 0.5s ease-out;
+}
+
+.votreemail button img:hover {
+    transform: translateX(8px);
+}
+
+.minitxt {
+    font-size: 14px;
+}
+/*boite jaune fin*/
+
+/*liste sponsor*/
+.logo_slide {
+    padding-top:20px;
+    margin-top: 50px;
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+    position: relative; /* Conteneur pour le positionnement des éléments */
+    display: flex;
+    align-items: center;
+    background-color: #EC1C24;
+}
+
+.liste_logo {
+    display: flex;
+    animation: scroll 14s linear infinite; /* Animation continue */
+    width: calc(var(--width) * var(--quantity) * 2); /* Doubler la largeur pour le scroll infini */
+    gap: 20px; /* Ajoute un espacement plus important entre les items */
+}
+
+.liste_logo .item {
+    flex-shrink: 0; /* Empêche les items de se réduire */
+    width: var(--width);
+    height: var(--height);
+    transition: transform 0.3s ease; /* Transition fluide pour l'effet de hover */
+}
+
+.liste_logo .item img {
+    width: 80%; /* Réduction de la taille de l'image à l'intérieur pour un meilleur espacement */
+    height: 80%;
+    object-fit: contain; /* Ajuste l'image sans déformation */
+
+}
+
+/* Animation pour le scroll infini */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-1 * var(--width) * var(--quantity)));
+    }
+}
+
+/* Effet au survol */
+.logo_slide:hover .liste_logo {
+    animation-play-state: paused; /* Pause l'animation */
+}
+.liste_logo .item:hover {
+    transform: scale(1.1); /* Agrandit légèrement l'item au survol */
+    z-index: 1; /* Place l'item au-dessus des autres lors du survol */
+}
+
+/*fin liste sponsor*/
+
+/*bar fix*/
+.bar-fixé {
+    position: fixed;
+    top: 70%;
+    left: 5%;
+    transform: translateY(-50%); /* peut être a enlever */
+    padding: 10px 10px;
+    text-align: center;
+    z-index: 100000000;
+}
+
+
+.vertical-txt {
+    writing-mode: vertical-rl; /* Rend le texte vertical */
+    transform: rotate(180deg); /* Inverse le sens du texte */
+    font-weight: bold;
+    font-size: 1.75rem;
+    color: white;
+    font-family: "AlbertSans-BoldItalic", sans-serif;
+    -webkit-text-stroke-width: 0.1rem;
+    -webkit-text-stroke-color: black;
+    margin-bottom: 20px; /* Espace entre le texte et les icônes */
+    font-style: italic;
+
+}
+
+
+.icones {
+    display: flex;
+    flex-direction: column;
+}
+
+.icone img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    padding: 2px;
+    transition: transform 0.3s ease;
+}
+
+.icone img:hover {
+    transform: translateX(4px);
+}
+/*bar fix fin*/
 
 /*footer*/
 footer {
@@ -378,436 +824,5 @@ footer {
 }
 /*footer fin*/
 
-/*bar fix*/
-.bar-fixé {
-    position: fixed;
-    top: 70%;
-    left: 5%;
-    transform: translateY(-50%); /* peut être a enlever */
-    padding: 10px 10px;
-    text-align: center;
-    z-index: 100000000;
-}
 
 
-.vertical-txt {
-    writing-mode: vertical-rl; /* Rend le texte vertical */
-    transform: rotate(180deg); /* Inverse le sens du texte */
-    font-weight: bold;
-    font-size: 1.75rem;
-    color: white;
-    font-family: "AlbertSans-BoldItalic", sans-serif;
-    -webkit-text-stroke-width: 0.1rem;
-    -webkit-text-stroke-color: black;
-    margin-bottom: 20px; /* Espace entre le texte et les icônes */
-
-}
-
-
-.icones {
-    display: flex;
-    flex-direction: column;
-}
-
-.icone img {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-    padding: 2px;
-    transition: transform 0.3s ease;
-}
-
-.icone img:hover {
-    transform: translateX(4px);
-}
-/*bar fix fin*/
-
-/*boitejaune*/
-.jaunetitre{
-    position: absolute;
-    font-size: 2.5rem;
-    color: white;
-    font-family: "AlbertSans-BoldItalic", sans-serif;
-    -webkit-text-stroke-width: 0.1rem;
-    -webkit-text-stroke-color: black;
-    margin-left: 10em;
-    margin-top: 3.5rem;
-}
-
-.boitejaune {
-    font-family: "AlbertSans-Bold", sans-serif;
-    background-color: #F8DF00;
-    border-radius: 12px;
-    padding: 40px;
-    width: 60%;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 100px;
-}
-
-.boitejaune h2 {
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.votreemail {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid black;
-    border-radius: 25px;
-    padding: 5px 10px;
-    max-width: 300px;
-}
-
-.votreemail input {
-    flex: 1;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    padding: 10px;
-}
-
-.votreemail button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0 10px;
-}
-
-.votreemail button img {
-    width: 20px;
-    height: 20px;
-    transition: 0.5s ease-out;
-}
-
-.votreemail button img:hover {
-    transform: translateX(8px);
-}
-
-.minitxt {
-    font-size: 14px;
-}
-/*boite jaune fin*/
-
-/*carre transparent*/
-.carres_transparent{
-    display: flex;
-    gap: 75px;
-    grid-auto-columns: 100px;
-    justify-content: center;
-}
-
-.carres_transparent div{
-    border: 3px solid white;
-    border-radius: 5px;
-    height: 100px;
-    width: 100px;
-    padding: 20px;
-    transition: 0.5s ease-out;
-    color: white;
-}
-.carres_transparent p{
-    margin-top: 10px;
-    padding-top: 0px;
-    font-size: 15px;
-}
-
-.carres_transparent img{
-    height: 50px;
-}
-
-.carres_transparent div:hover + img{
-    filter: invert(100%);
-}
-
-.carres_transparent div:hover{
-    background-color: #EC1C24;
-    transition: 0.5s ease-out;
-    transform: translate(0px, -5px);
-}
-.fauteuil{
-    grid-column: 1/5;
-}
-.cafe{
-    grid-column: 2/5;
-}
-.vetement{
-    grid-column: 3/5;
-}
-.visage{
-    grid-column: 4/5;
-}
-.book{
-    grid-column: 5/5;
-}
-/*flemme*/
-.shopping-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    z-index: 10;
-    padding: 20px 40px;
-    color: white;
-}
-
-
-.shopping-text h1 {
-    font-size: 48px;
-    font-weight: bold;
-    margin: 0;
-}
-
-.shopping-text .highlight {
-    color: transparent;
-    -webkit-text-stroke-width: 0.1rem;
-    -webkit-text-stroke-color: white;
-}
-
-.all-shops-button button {
-    background-color: white;
-    width: 180px;
-    height: 40px;
-    color: #EC1C24;
-    border: none;
-    border-radius: 10px;
-    padding: 5px 10px;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.all-shops-button button:hover {
-    transition: 0.3s ease;
-    width: 200px;
-}
-
-
-.shopping-footer {
-    text-align: center;
-    position: relative;
-    z-index: 10;
-    color: white;
-    margin-top: 20px;
-}
-
-.shopping-footer p {
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-
-
-/*carre transparent fin*/
-
-
-
-
-/*slider martin*/
-#superactu {
-    margin-top: 150px;
-    margin-bottom: 150px;
-}
-
-.actu{
-    display: grid;
-    grid-template-columns: 2fr 3fr 2fr;
-    inline-size: auto;
-}
-
-.actus_et{
-    margin-left: 2rem;
-    justify-self: left;
-    font-family: "AlbertSans", sans-serif;
-    font-size: 3rem;
-    color: white;
-    margin-bottom: -50px;
-}
-
-.bouton_actus {
-    white-space: none;
-    grid-column: 3;
-    background-color: white;
-    width: 15rem;
-    padding: 0.5rem;
-    color: #EC1C24;
-    border: none;
-    border-radius: 10px;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.bouton_actus:hover {
-    transition: 0.3s ease;
-    width: 15.5rem;
-}
-
-.bonPlan {
-    margin-left: 2rem;
-    font-size: 3rem;
-    display: grid;
-    grid-template-columns: 2fr 1fr 3fr 1fr;
-    inline-size: auto;
-    margin-top: -20px;
-    color: transparent;
-    -webkit-text-stroke-width: 0.1rem;
-    -webkit-text-stroke-color: white;
-}
-
-.arrow {
-    margin-top: 60px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-}
-
-.left-arrow {
-    margin-left: 7rem;
-}
-
-.right-arrow {
-
-}
-.progress-bar {
-    margin-top: 76px;
-    margin-right: 55px;
-    height: 5px;
-    background-color: lightgrey;
-    position: relative;
-    overflow: hidden;
-    border-radius: 2px;
-}
-
-.progress-indicator {
-    height: 100%;
-    background-color: white;
-    width: 0%; /* Mise à jour via JS */
-    transition: width 0.5s ease;
-}
-
-
-.carousel-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    background-color: red;
-    padding: 20px 0;
-}
-
-.carousel {
-    display: flex;
-    gap: 20px;
-    transition: transform 0.5s ease;
-}
-
-.slide {
-    flex: 0 0 calc(25% - 20px); /* 4 slides visibles */
-    max-width: calc(25% - 20px);
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: left;
-    background-size: cover;
-    object-fit: cover;
-    background-position: center;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.date{
-    font-family: "Albert Sans", sans-serif;
-    font-size: 12px;
-    margin-top: 97%;
-    margin-left: 30px;
-    color: lightgray;
-    z-index: 10;
-}
-
-.slide-text{
-    font-family: "Albert Sans", sans-serif;
-    font-size: 25px;
-    margin-left: 30px;
-    color: white;
-    z-index: 10;
-}
-
-.hashtag{
-    font-family: "Albert Sans", sans-serif;
-    font-size: 12px;
-    margin-top: 32px;
-    margin-left: 30px;
-    color: white;
-    z-index: 10;
-}
-
-.black-bg{
-    background-color: black;
-    max-width: fit-content;
-}
-/*fin slider*/
-
-/*liste sponsor*/
-.logo_slide {
-    padding-top:20px;
-    margin-top: 50px;
-    width: 100%;
-    height: var(--height);
-    overflow: hidden;
-    position: relative; /* Conteneur pour le positionnement des éléments */
-    display: flex;
-    align-items: center;
-}
-
-.liste_logo {
-    display: flex;
-    animation: scroll 14s linear infinite; /* Animation continue */
-    width: calc(var(--width) * var(--quantity) * 2); /* Doubler la largeur pour le scroll infini */
-    gap: 20px; /* Ajoute un espacement plus important entre les items */
-}
-
-.liste_logo .item {
-    flex-shrink: 0; /* Empêche les items de se réduire */
-    width: var(--width);
-    height: var(--height);
-    transition: transform 0.3s ease; /* Transition fluide pour l'effet de hover */
-}
-
-.liste_logo .item img {
-    width: 80%; /* Réduction de la taille de l'image à l'intérieur pour un meilleur espacement */
-    height: 80%;
-    object-fit: contain; /* Ajuste l'image sans déformation */
-
-}
-
-/* Animation pour le scroll infini */
-@keyframes scroll {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(calc(-1 * var(--width) * var(--quantity)));
-    }
-}
-
-/* Effet au survol */
-.logo_slide:hover .liste_logo {
-    animation-play-state: paused; /* Pause l'animation */
-}
-.liste_logo .item:hover {
-    transform: scale(1.1); /* Agrandit légèrement l'item au survol */
-    z-index: 1; /* Place l'item au-dessus des autres lors du survol */
-}
-
-/*fin liste sponsor*/
