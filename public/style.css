@@ -381,8 +381,8 @@ footer {
 /*bar fix*/
 .bar-fixé {
     position: fixed;
-    top: 60%;
-    left: 10%;
+    top: 70%;
+    left: 5%;
     transform: translateY(-50%); /* peut être a enlever */
     padding: 10px 10px;
     text-align: center;
@@ -393,22 +393,25 @@ footer {
 .vertical-txt {
     writing-mode: vertical-rl; /* Rend le texte vertical */
     transform: rotate(180deg); /* Inverse le sens du texte */
-    font-size: 14px;
     font-weight: bold;
+    font-size: 1.75rem;
+    color: white;
+    font-family: "AlbertSans-BoldItalic", sans-serif;
+    -webkit-text-stroke-width: 0.1rem;
+    -webkit-text-stroke-color: black;
     margin-bottom: 20px; /* Espace entre le texte et les icônes */
-    color: black;
+
 }
 
 
 .icones {
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
 .icone img {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     object-fit: contain;
     padding: 2px;
     transition: transform 0.3s ease;
@@ -452,17 +455,36 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
-    gap: 10px;
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 5px 10px;
+    max-width: 300px;
 }
 
 .votreemail input {
-    padding: 10px 15px;
-    border: 2px solid black;
-    border-radius: 25px;
-    font-size: 15px;
     flex: 1;
-    max-width: 300px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.votreemail button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.votreemail button img {
+    width: 20px;
+    height: 20px;
+    transition: 0.5s ease-out;
+}
+
+.votreemail button img:hover {
+    transform: translateX(8px);
 }
 
 .minitxt {
@@ -639,18 +661,24 @@ footer {
 }
 
 .arrow {
-    margin-top: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    margin-top: 60px;
+    background-color: transparent;
     border: none;
-    border-radius: 50%;
+    cursor: pointer;
     width: 40px;
     height: 40px;
-    cursor: pointer;
+}
+
+.left-arrow {
+    margin-left: 7rem;
+}
+
+.right-arrow {
 
 }
 .progress-bar {
-    margin-top: 30px;
+    margin-top: 76px;
+    margin-right: 55px;
     height: 5px;
     background-color: lightgrey;
     position: relative;
