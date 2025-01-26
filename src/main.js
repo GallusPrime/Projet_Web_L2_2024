@@ -1,20 +1,20 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const carousel = document.querySelector('.carousel');
-    const slides = document.querySelectorAll('.slide');
-    const leftArrow = document.querySelector('.left-arrow');
-    const rightArrow = document.querySelector('.right-arrow');
-    const progressIndicator = document.querySelector('.progress-indicator');
+document.addEventListener('DOMContentLoaded', () => { //fais le javascript après que tout le web a été load
+    const carousel = document.querySelector('.carousel');//prend le carousel
+    const slides = document.querySelectorAll('.slide');//le slide
+    const leftArrow = document.querySelector('.left-arrow');//button gauche
+    const rightArrow = document.querySelector('.right-arrow');// button droite
+    const progressIndicator = document.querySelector('.progress-indicator');// la ou on est
 
-    let currentIndex = 0;
+    let currentIndex = 0;// valeur de la posisiton actuelle
 
-    function updateCarousel() {
-        const slideWidth = slides[0].offsetWidth + 20; // Largeur de la slide + espace
+    function updateCarousel() { // met le carousel a jour le carousel
+        const slideWidth = slides[0].offsetWidth + 20; // largeur de la slide plus l'espace
         const totalSlides = slides.length;
 
-        // Déplacement du carrousel
+        // mouve le carrousel
         carousel.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
 
-        // Mise à jour de la barre de progression
+        // mets la barre a jour
         const progressPercentage = ((currentIndex + 1) / totalSlides) * 100;
         progressIndicator.style.width = `${progressPercentage}%`;
     }
@@ -22,23 +22,23 @@ document.addEventListener('DOMContentLoaded', () => {
     leftArrow.addEventListener('click', () => {
         if (currentIndex > 0) {
             currentIndex--;
-            updateCarousel();
+            updateCarousel();//misa a jour
         }
     });
 
     rightArrow.addEventListener('click', () => {
-        if (currentIndex < slides.length - 4) { // Affiche 4 slides à la fois
+        if (currentIndex < slides.length - 4) {// affiche 4 slides à la fois
             currentIndex++;
-            updateCarousel();
+            updateCarousel();// met a jour
         }
     });
 
-    // Ajuster la position du carrousel lors du redimensionnement
+    // ajuster la position du carrousel
     window.addEventListener('resize', () => {
         updateCarousel();
     });
 
-    // Initialisation
+    // initialise
     updateCarousel();
 
     // premier slider

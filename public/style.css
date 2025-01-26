@@ -8,17 +8,16 @@ body{
     margin: 0;
 }
 
+
+
+
 .background{
     background-color: #EC1C24;
     background-size: cover;
     background-position: center;
 }
 
-.background_bas{
-    background-color: #EC1C24;
-    background-position: bottom;
-    background-size: 50% 50%;
-}
+
 
 a{
     color: black;
@@ -38,6 +37,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 10000000000000;
+    overflow: hidden;
 }
 
 /*partie supérieure du header (c'est-à-dire header dans la partie saint valentin*/
@@ -153,7 +153,7 @@ header {
 /*premier slider*/
 .slider {
     padding-top: 10rem; /*premet d'avoir la couleur rouge en dessus du header*/
-    margin: 0; /*pour etre sur que ça collé sur les cpté*/
+    margin: 0; /*pour etre sur que ça collé sur les coté*/
     justify-content: center;
     align-items: center;
     width: 100%; /* prend toute la largeur de l'écran */
@@ -230,7 +230,7 @@ header {
     gap: 4.75vw;
     grid-auto-columns: 6.25vw;
     margin-top: 10rem;
-    margin-left: 8rem;
+    justify-content: center;
 }
 
 /*représente un carré*/
@@ -287,7 +287,7 @@ header {
 /*deuxième slider*/
 #superactu {
     margin-top: 9.375rem; /* donne de la marge en haut et en bas (9.375rem = 150px)*/
-    margin-bottom: 9.375rem;
+    padding-bottom: 7rem;
 }
 
 .actu{
@@ -392,53 +392,55 @@ header {
     border-radius: 0.5rem;
     overflow: hidden;
     text-align: left;
-    background-size: cover;
+    background-size: cover;/*l'image couvre bien tout la surface relier a*/
     object-fit: cover;
 }
 
 .slide img {
-    object-fit: cover;
+    object-fit: cover;/*l'image couvre bien tout la surface relier*/
 }
 
 .date{
     font-family: "Albert Sans", sans-serif;
-    font-size: 12px;
-    margin-top: 97%;
-    margin-left: 30px;
+    font-size: 0.75rem;
+    margin-top: 97%;/*on le position bien*/
+    margin-left: 1.875rem;
     color: lightgray;
-    z-index: 10;
+    z-index: 10;/*met au-dessus*/
 }
 
 .slide-text{
     font-family: "Albert Sans", sans-serif;
-    font-size: 25px;
-    margin-left: 30px;
+    font-size: 1.55rem;
+    margin-left: 1.875rem;
     color: white;
-    z-index: 10;
+    z-index: 10;/*met au-dessus*/
 }
 
 .hashtag{
     font-family: "Albert Sans", sans-serif;
-    font-size: 12px;
-    margin-top: 32px;
-    margin-left: 30px;
+    font-size: 0.75rem;
+    margin-top: 2rem;
+    margin-left: 1.875rem; /*on le position bien*/
     color: white;
     z-index: 10;
 }
 
 .black-bg{
     background-color: black;
-    max-width: fit-content;
+    max-width: fit-content; /*pour feldup car c'est un bg*/
 }
 /*fin du deuxième slider*/
 
 /*carre transparent*/
+.sans_rouge {
+    margin-top: 4rem;/* on postion mieux */
+}
 .carres_transparent{
     display: flex;
     gap: 4.75vw;
     grid-auto-columns: 6.25vw;
-    margin-top: 10rem;
-    margin-left: 12vw;
+    justify-content: center;/* centre les element */
 }
 
 .carres_transparent div{
@@ -451,25 +453,25 @@ header {
     color: white;
 }
 .carres_transparent p{
-    margin-top: 10px;
-    padding-top: 0px;
-    font-size: 15px;
+    margin-top: 0.70rem; /* position */
+    padding-top: 0;
+    font-size: 1rem;
 }
 
 .carres_transparent img{
-    height: 50px;
+    height: 3.125rem;
 }
 
 .carres_transparent div:hover + img{
-    filter: invert(100%);
+    filter: invert(100%);/* met le flitre quand on passe dessus */
 }
 
 .carres_transparent div:hover{
     background-color: #EC1C24;
     transition: 0.5s ease-out;
-    transform: translate(0px, -5px);
+    transform: translate(0, -0.30rem); /* deplace vers le haut */
 }
-.fauteuil{
+.fauteuil{ /* un peu de rangement */
     grid-column: 1/5;
 }
 .cafe{
@@ -488,36 +490,34 @@ header {
 
 /**/
 .shopping-header {
-    display: flex;
+    display: flex;/* on les position horizontalement et on les centre */
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    z-index: 10;
-    padding: 20px 40px;
+    padding: 1.25rem 2.5rem;
     color: white;
 }
 
 .shopping-text h1 {
-    font-size: 48px;
+    font-size: 2.7rem;
     font-weight: bold;
     margin: 0;
 }
 
 .shopping-text .highlight {
     color: transparent;
-    -webkit-text-stroke-width: 0.1rem;
+    -webkit-text-stroke-width: 0.1rem;/*color: #EC1C24; pour avoir une version sur d'autre moteur de recherche */
     -webkit-text-stroke-color: white;
 }
 
+
 .all-shops-button button {
     background-color: white;
-    width: 180px;
-    height: 40px;
-    color: #EC1C24;
-    border: none;
-    border-radius: 10px;
-    padding: 5px 10px;
-    font-size: 15px;
+    width: 11.25rem;
+    height: 2.5rem;
+    border: none;  /* sans inteerface button */
+    border-radius: 0.625rem;
+    padding: 0.25rem  0.625rem;
+    font-size: 0.90rem;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -525,20 +525,18 @@ header {
 
 .all-shops-button button:hover {
     transition: 0.3s ease;
-    width: 200px;
+    width: 12.5rem;
 }
 
 .shopping-footer {
     text-align: center;
     position: relative;
-    z-index: 10;
     color: white;
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 .shopping-footer p {
-    font-size: 18px;
-    line-height: 1.5;
+    font-size: 1.1rem;
 }
 
 /*titre figurant au dessus de la zone en jaune*/
@@ -552,6 +550,7 @@ header {
     margin-left: 23rem;
     margin-top: 3.5rem;
     font-style: italic;
+    z-index: 2;
 }
 
 /*zone en jaune*/
@@ -561,10 +560,12 @@ header {
     border-radius: 12px;
     padding: 40px;
     width: 60%;
-    margin: 0 auto;
+    margin: -4.25rem auto;
     text-align: center;
-    margin-top: 100px;
     height: 250px;
+    position: relative; /* Permet de la positionner par rapport à son parent */
+    bottom: -150px; /* Fait descendre la boîte de moitié */
+    z-index: 1; /* Assure que la boîte est au-dessus du fond rouge */
 }
 
 /*texte "infos & bon plans" dans la zone jaune*/
@@ -622,48 +623,55 @@ header {
     font-size: 14px;
 }
 /*boite jaune fin*/
+.background_bas{
+    background-color: #EC1C24;
+    height: 15.5rem;
+    position: static;
+}
+
 
 /*liste sponsor*/
+/*cette partie a été grandemetn inspiré d'une video youtube (on a beaucoup appris)*/
 .logo_slide {
-    padding-top:20px;
-    margin-top: 50px;
+    padding-top:20px; /*positon du conteneur avec le margin*/
+    margin-top: 0;
     width: 100%;
-    height: var(--height);
+    height: var(--height);/*utillise la valeur static*/
     overflow: hidden;
     position: relative; /* Conteneur pour le positionnement des éléments */
     display: flex;
-    align-items: center;
+    align-items: center;/*bien centre*/
     background-color: #EC1C24;
 }
 
 .liste_logo {
-    display: flex;
-    animation: scroll 14s linear infinite; /* Animation continue */
-    width: calc(var(--width) * var(--quantity) * 2); /* Doubler la largeur pour le scroll infini */
-    gap: 20px; /* Ajoute un espacement plus important entre les items */
+    display: flex; /*ça les met horizontallement*/
+    animation: scroll 14s linear infinite; /* animation 14s en continue */
+    width: calc(var(--width) * var(--quantity) * 2); /* la largeur est 2 fois le nombre total d'éléments pour le scroll infini */
+    gap: 20px; /* ajoute un espacement entre les image */
 }
 
 .liste_logo .item {
-    flex-shrink: 0; /* Empêche les items de se réduire */
-    width: var(--width);
+    flex-shrink: 0; /* les items ne peuve se réduire */
+    width: var(--width); /*utillise valeur static*/
     height: var(--height);
-    transition: transform 0.3s ease; /* Transition fluide pour l'effet de hover */
+    transition: transform 0.3s ease; /* transition fluide pour l'effet de hover */
 }
 
 .liste_logo .item img {
-    width: 80%; /* Réduction de la taille de l'image à l'intérieur pour un meilleur espacement */
+    width: 80%; /* réduction de la taille de l'image à l'intérieur pour un meilleur espacement */
     height: 80%;
-    object-fit: contain; /* Ajuste l'image sans déformation */
+    object-fit: contain; /* ajuste l'image sans déformation */
 
 }
 
-/* Animation pour le scroll infini */
+/* animation pour le scroll infini */
 @keyframes scroll {
     from {
-        transform: translateX(0);
+        transform: translateX(0); /* depart du scroll */
     }
     to {
-        transform: translateX(calc(-1 * var(--width) * var(--quantity)));
+        transform: translateX(calc(-1 * var(--width) * var(--quantity))); /* fin du scroll */
     }
 }
 
@@ -672,8 +680,8 @@ header {
     animation-play-state: paused; /* Pause l'animation */
 }
 .liste_logo .item:hover {
-    transform: scale(1.1); /* Agrandit légèrement l'item au survol */
-    z-index: 1; /* Place l'item au-dessus des autres lors du survol */
+    transform: scale(1.1); /* agrandit légèrement l'item au survol */
+    z-index: 1; /* place l'item au-dessus des autres lors du survol au cas où*/
 }
 
 /*fin liste sponsor*/
@@ -734,6 +742,7 @@ footer {
     padding: 20px 10px 10px 150px;
     position: relative;
     font-size: 14px;
+
 }
 
 /*partie gauche du footer*/
@@ -885,6 +894,21 @@ footer {
     transform: translateX(8px);
 }
 /*footer fin*/
+
+@media (max-width: 768px) {
+    header {
+        position: relative;
+        overflow: hidden;
+        overflow-x: auto;
+    }
+    footer {
+        overflow: hidden;
+        overflow-x: auto;
+    }
+    body {
+        overflow-x: scroll;
+    }
+}
 
 
 
