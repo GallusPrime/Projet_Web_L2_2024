@@ -93,24 +93,24 @@
       </div></a>
     </section>
 
-    <section id="superactu">
+    <section id="superactu"><!-- le deuxième slider -->
 
-      <div class="actu">
+      <div class="actu"><!-- on va crée deux grid une pour actu l'autre pou bonplan -->
         <p class="actus_et">Actus &</p>
         <p class="bouton_actus"><a href="https://www.carrefour.fr/">Toutes les actus & bons plans</a></p>
       </div>
       <div class="bonPlan">
         <p class="bons_plans">bons plans</p>
-        <button class="arrow left-arrow"><img src="public/arrow_left1.svg"></button>
+        <button class="arrow left-arrow"><img src="public/arrow_left1.svg"></button> <!-- le rigth et le left sont presque juste la pour le js -->
         <div class="progress-bar">
-          <div class="progress-indicator"></div>
+          <div class="progress-indicator"></div><!-- sera en relation avec le js -->
         </div>
         <button class="arrow right-arrow"><img src="public/arrow_lesft.svg"></button>
       </div>
 
-      <div class="carousel-container">
-        <div class="carousel">
-          <div class="slide" style="background-image: url('public/feldupSold_slide.png');">
+      <div class="carousel-container"> <!-- debut des slide donc ici c'est le conteneur  -->
+        <div class="carousel"><!-- c'est pour flex box -->
+          <div class="slide" style="background-image: url('public/feldupSold_slide.png');"><!-- on donnes les propriété pour chaque slide-->
             <a href="https://www.infoconcert.com/artiste/feldup-207941/concerts.html"> <p class="date"><b>27/09/2024</b></p>
             <p class="slide-text black-bg"><b>Feldup en concert</b></p>
               <p class="hashtag black-bg"><b>#pas cancer :)</b></p></a>
@@ -160,11 +160,11 @@
       </div>
       <div class="carres_transparent">
         <a href="https://www.maisonsdumonde.com/FR/fr"><div class="fauteuil">
-          <img src="/public/fauteuil.svg" alt="objets trouvés">
+          <img src="public/fauteil.svg" alt="objets trouvés">
           <p>Maison</p>
         </div></a>
         <a href="https://www.thefork.fr/"><div class="cafe">
-          <img src="/public/cafe.svg" alt="accès">
+          <img src="public/cafe.svg" alt="accès">
           <p>Restauration</p>
         </div></a>
         <a href="https://www.tendances-de-mode.com/"><div class="vetement">
@@ -172,11 +172,11 @@
           <p>Mode & bijoux</p>
         </div></a>
         <a href="https://sante-et-beaute.fr/"><div class="visage">
-          <img src="/public/visiage.svg" alt="accessibilite">
+          <img src="public/visage.svg" alt="accessibilite">
           <p>Beaté & Santé</p>
         </div></a>
         <a href="https://fr.wikipedia.org/wiki/Loisir"><div class="book">
-          <img src="/public/book.svg" alt="plus de services">
+          <img src="public/bouquin.svg" alt="plus de services">
           <p>Culture & Loisirs</p>
         </div></a>
       </div>
@@ -203,7 +203,7 @@
     </section>
     <h2 class="jaunetitre" id="jaunetitre">#enmodetips</h2>
 
-    <div class="background_bas">
+
     <section class="boitejaune">
       <h2>Infos & bons plans</h2>
       <form class="votreemail">
@@ -217,6 +217,7 @@
         des enseignes et vous prenez connaissance de notre Politique de confidentialité.
       </p>
     </section>
+    <div class="background_bas">
     </div>
 
 
@@ -224,9 +225,9 @@
     --width: 200px;
     --height: 200px;
     --quantity: 9;
-">
+"> <!-- on mets des valeurs const pour le css -->
       <div class="liste_logo">
-        <!-- Logos originaux -->
+        <!-- Logos  -->
         <a href="https://www.dubruitdanslacuisine.fr/"> <div class="item"><img src="public/cuisine.png" alt="Cuisine"></div> </a>
         <a href="https://www.fnac.com/"> <div class="item"><img src="public/fnac.png" alt="Fnac"></div> </a>
         <a href="https://www2.hm.com/fr_fr/index.html"> <div class="item"><img src="public/h&m.png" alt="H&M"></div> </a>
@@ -237,7 +238,7 @@
         <a href="https://www.infoconcert.com/artiste/feldup-207941/concerts.html"> <div class="item"><img src="public/feldupSold_slide.png" alt="Feldup Sold"></div> </a>
         <a href="https://www.youtube.com/@Feldup"> <div class="item"><img src="public/feldup.jpg" alt="Feldup"></div> </a>
 
-        <!-- Duplication des logos -->
+        <!-- logos * 2 -->
         <a href="https://www.dubruitdanslacuisine.fr/"> <div class="item"><img src="public/cuisine.png" alt="Cuisine"></div> </a>
         <a href="https://www.fnac.com/"> <div class="item"><img src="public/fnac.png" alt="Fnac"></div> </a>
         <a href="https://www2.hm.com/fr_fr/index.html"> <div class="item"><img src="public/h&m.png" alt="H&M"></div> </a>
