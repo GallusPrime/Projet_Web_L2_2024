@@ -51,7 +51,6 @@ header {
 .logo {
     padding: 5px 0;
     font-size: 50px;
-    font-family: "Comic Sans MS";
     grid-column: 1;
     grid-row: 1;
 }
@@ -84,7 +83,7 @@ header {
     margin-left: 20px;
     grid-column: 6;
     grid-row: 1;
-    z-index: 2
+    z-index: 10000000000;
 }
 
 /*texte de la zone horaire*/
@@ -92,7 +91,7 @@ header {
     background-color: #F8DF00;
     padding: 10px;
     border-radius: 10px;
-    z-index: 2
+    z-index: 10000000000;
 }
 
 /*horaires s'affichant en bas de la partie ouvert - 9:30 à 19:30*/
@@ -101,13 +100,13 @@ header {
     padding: 10px;
     border-radius: 10px;
     display: none;
-    z-index: 2
+    z-index: 10000000000;
 }
 
 /*affichage des horaires*/
 .horaire-text:hover + .horaires {
     display: block;
-    z-index: 2;
+    z-index: 10000000000;
 }
 
 /*partie à droite du header (avec la loupe)*/
@@ -294,6 +293,7 @@ header {
     display: grid;
     grid-template-columns: 2fr 3fr 2fr; /*on ajuste par rapport au grid du bas*/
     inline-size: auto;
+    margin-left: 5rem;
 }
 
 .actus_et{
@@ -305,19 +305,22 @@ header {
     margin-bottom: -3.125rem; /* on postion a l'envers car sinon a l'endroit ça marché pas et on sait pas pourquoi */
 }
 
-.bouton_actus {
+.bouton_actus  {
     white-space: none;
     grid-column: 3;
     background-color: white;
     width: 15rem;
     padding: 0.5rem;
-    color: #EC1C24;
+
     border: none;
     border-radius: 0.62rem;
     font-size: 0.93rem;
     font-weight: bold;
     cursor: pointer; /* on peut clicke ici*/
     transition: background-color 0.3s ease;
+}
+.bouton_actus a{
+    color: #EC1C24;
 }
 
 .bouton_actus:hover {
@@ -430,6 +433,8 @@ header {
     background-color: black;
     max-width: fit-content; /*pour feldup car c'est un bg*/
 }
+
+
 /*fin du deuxième slider*/
 
 /*carre transparent*/
@@ -521,6 +526,10 @@ header {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+.all-shops-button a {
+    color: #EC1C24;/* faut être precis pour que ça devienne rouge*/
 }
 
 .all-shops-button button:hover {
@@ -622,7 +631,7 @@ header {
 .minitxt {
     font-size: 14px;
 }
-/*boite jaune fin*/
+/*boite jaune fin */
 .background_bas{
     background-color: #EC1C24;
     height: 15.5rem;
