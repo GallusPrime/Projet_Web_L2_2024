@@ -41,32 +41,40 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialisation
     updateCarousel();
 
-    /*test*/
-    const slider = document.querySelector('.sliderImg');
-    const points = document.querySelectorAll('.points a');
-    const images = document.querySelectorAll('.sliderImg img');
+    // premier slider
+    const slider = document.querySelector('.sliderImg');//prend le conteneur d'image
+    const points = document.querySelectorAll('.points a');//prend les point un par un
+    const images = document.querySelectorAll('.sliderImg img');// prend les image
 
-// Synchroniser les points avec les images
+// point image synchro
     points.forEach((point, index) => {
         point.addEventListener('click', (e) => {
-            e.preventDefault();
+            e.preventDefault(); // ne fais pas le mode defaut lien
             slider.scrollTo({
-                left: images[index].offsetLeft,
-                behavior: 'smooth',
+                left: images[index].offsetLeft, // scroll jusqu'as la position de la next image
+                behavior: 'smooth',// rend ça fluide
             });
         });
     });
 
-// Mettre en évidence le point actif en fonction de l'image visible
+    // sycro les point opacity a l'image
     slider.addEventListener('scroll', () => {
-        const scrollPosition = slider.scrollLeft;
+        const scrollPosition = slider.scrollLeft; //prend la position actuellee du scroll
         images.forEach((image, index) => {
-            if (Math.round(image.offsetLeft - scrollPosition) === 0) {
-                points.forEach((point) => point.style.opacity = '0.75');
-                points[index].style.opacity = '1';
+            if (Math.round(image.offsetLeft - scrollPosition) === 0) { //si image alligné a gauche
+                points[index].style.opacity = '1';// point opaque au bon moment
+
+            } else {
+                points[index].style.opacity = '0.65'; // mets les autre a 65
+                if (points[0].style.opacity && points[1].style.opacity === '0.65') { // regle le problem d'allignement a gauche pour le dernier
+                    points[2].style.opacity = '1';
+                }
             }
+            if (points[0].style.opacity === '1') {// regle le problem a cause du décalage du a
+                points[2].style.opacity = '0.65';
+            }
+
         });
     });
-    /*fin test*/
 });
 
