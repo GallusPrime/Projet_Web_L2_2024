@@ -917,6 +917,12 @@ footer {
     body {
         overflow-x: scroll;
     }
+    .carres{
+        gap: 2vw;
+    }
+    .carres_transparent {
+        gap: 2vw;
+    }
 }
 
 
