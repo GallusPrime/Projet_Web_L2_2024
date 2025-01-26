@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 body{
-    background-image:url("/Projet_Web_L2_2024/public/leBackgroundStatic.jpg");
+    background-image:url("/Projet_Web_L2_2024/public/leBackgroundStatic.jpg");/*on essayer plein de façon différent c'est la seul qui a marché avec nous */
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
