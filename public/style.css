@@ -25,6 +25,10 @@ a{
     text-decoration: none;
 }
 
+div {
+    text-align: center;
+    font-family: "AlbertSans-Bold", sans-serif;
+}
 
 /*header*/
 header {
@@ -36,17 +40,14 @@ header {
     z-index: 10000000000000;
 }
 
+/*partie supérieure du header (c'est-à-dire header dans la partie saint valentin*/
 .ensemble {
     display: grid;
     gap: 2rem;
     grid-auto-rows: 100px;
 }
 
-div {
-    text-align: center;
-    font-family: "AlbertSans-Bold", sans-serif;
-}
-
+/*logo à gauche du header*/
 .logo {
     padding: 5px 0;
     font-size: 50px;
@@ -55,12 +56,14 @@ div {
     grid-row: 1;
 }
 
+/*partie boutique & restaurant*/
 .boutique {
     padding: 30px 0;
     grid-column: 2;
     grid-row: 1;
 }
 
+/*partie actus & bon plans*/
 .actus {
     padding: 30px 0;
     grid-column: 3;
@@ -68,12 +71,14 @@ div {
     min-width: 100px;
 }
 
+/*partie infos pratiques*/
 .info {
     padding: 30px 0;
     grid-column: 4;
     grid-row: 1;
 }
 
+/*partie ouvert - 9:30 à 19:30*/
 .horaire {
     padding: 5px;
     margin-left: 20px;
@@ -82,6 +87,7 @@ div {
     z-index: 2
 }
 
+/*texte de la zone horaire*/
 .horaire-text {
     background-color: #F8DF00;
     padding: 10px;
@@ -89,6 +95,7 @@ div {
     z-index: 2
 }
 
+/*horaires s'affichant en bas de la partie ouvert - 9:30 à 19:30*/
 .horaires {
     background-color: #F8DF00;
     padding: 10px;
@@ -97,11 +104,13 @@ div {
     z-index: 2
 }
 
+/*affichage des horaires*/
 .horaire-text:hover + .horaires {
     display: block;
     z-index: 2;
 }
 
+/*partie à droite du header (avec la loupe)*/
 .recherche {
     align-content: center;
     margin-right: 40px;
@@ -110,11 +119,13 @@ div {
     display: grid;
 }
 
+/*loupe à droite*/
 .loupe {
     grid-column: 2;
     grid-row: 1;
 }
 
+/*barre de recherche s'affichant à gauche de la loupe*/
 .barre {
     float: left;
     margin-right: 30px;
@@ -123,10 +134,12 @@ div {
     grid-row: 1;
 }
 
+/*affichage de la barre*/
 .loupe:hover + .barre {
     display: block;
 }
 
+/*partie saint valentin (partie noire sous le header)*/
 .stvalentin {
     padding: 0.5rem;
     background-color: black;
@@ -217,9 +230,10 @@ div {
     gap: 4.75vw;
     grid-auto-columns: 6.25vw;
     margin-top: 10rem;
-    margin-left: 12vw;
+    margin-left: 8rem;
 }
 
+/*représente un carré*/
 .carres div{
     display: flex;
     flex-direction: column;
@@ -234,27 +248,34 @@ div {
     color: white;
     z-index: 1;
 }
+
+/*texte à l'intérieur du carré*/
 .carres p{
     margin-top: 0.75rem;
     font-size: 0.95rem;
 }
 
+/*image rouge remplaçant l'image blanche lorsque l'on passe la souris sur un carré*/
 .red{
     display: none;
 }
 
+/*image blanche figurant dans le carré*/
 .carres img{
     height: 50px;
 }
 
+/*disparition de l'image blanche*/
 .carres div:hover .white{
     display: none;
 }
 
+/*affichage de l'image rouge*/
 .carres div:hover .red{
     display: block;
 }
 
+/*mise en texte en noir et élévation du carré lorsque l'on passe la souris sur un carré*/
 .carres div:hover{
     color: black;
     background-color: white;
@@ -463,8 +484,9 @@ div {
 .book{
     grid-column: 5/5;
 }
+/*carre transparent fin*/
 
-/*flemme*/
+/**/
 .shopping-header {
     display: flex;
     justify-content: space-between;
@@ -474,7 +496,6 @@ div {
     padding: 20px 40px;
     color: white;
 }
-
 
 .shopping-text h1 {
     font-size: 48px;
@@ -507,7 +528,6 @@ div {
     width: 200px;
 }
 
-
 .shopping-footer {
     text-align: center;
     position: relative;
@@ -521,9 +541,7 @@ div {
     line-height: 1.5;
 }
 
-/*carre transparent fin*/
-
-/*boitejaune*/
+/*titre figurant au dessus de la zone en jaune*/
 .jaunetitre{
     position: absolute;
     font-size: 2.5rem;
@@ -536,6 +554,7 @@ div {
     font-style: italic;
 }
 
+/*zone en jaune*/
 .boitejaune {
     font-family: "AlbertSans-Bold", sans-serif;
     background-color: #F8DF00;
@@ -548,12 +567,14 @@ div {
     height: 250px;
 }
 
+/*texte "infos & bon plans" dans la zone jaune*/
 .boitejaune h2 {
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 40px;
 }
 
+/*espace dédiée à la zone de texte dans la boite jaune*/
 .votreemail {
     display: flex;
     justify-content: center;
@@ -566,6 +587,7 @@ div {
     margin-bottom: 40px;
 }
 
+/*zone de texte dans la boite jaune*/
 .votreemail input {
     flex: 1;
     background: transparent;
@@ -575,6 +597,7 @@ div {
     padding: 10px;
 }
 
+/*bouton (flèche) dans la zone de texte*/
 .votreemail button {
     background-color: transparent;
     border: none;
@@ -582,16 +605,19 @@ div {
     padding: 0 10px;
 }
 
+/*icône de la flèche*/
 .votreemail button img {
     width: 20px;
     height: 20px;
     transition: 0.5s ease-out;
 }
 
+/*déplacement de la flèche lorsque l'on passe la souris dessus*/
 .votreemail button img:hover {
     transform: translateX(8px);
 }
 
+/*texte figurant en bas de la zone jaune*/
 .minitxt {
     font-size: 14px;
 }
@@ -663,7 +689,7 @@ div {
     z-index: 100000000;
 }
 
-
+/*texte "#enmodepartage" affiché à la verticale*/
 .vertical-txt {
     writing-mode: vertical-rl; /* Rend le texte vertical */
     transform: rotate(180deg); /* Inverse le sens du texte */
@@ -677,11 +703,13 @@ div {
     font-style: italic;
 }
 
+/*logos facebook et twitter en dessous du texte*/
 .icones {
     display: flex;
     flex-direction: column;
 }
 
+/*icône des logos*/
 .icone img {
     width: 30px;
     height: 30px;
@@ -690,6 +718,7 @@ div {
     transition: transform 0.3s ease;
 }
 
+/*déplacement les logos lorsque l'on passe la souris dessus*/
 .icone img:hover {
     transform: translateX(4px);
 }
@@ -707,58 +736,24 @@ footer {
     font-size: 14px;
 }
 
-.footer-centre {
-    text-align: left;
-    margin-left: 50px;
-    padding-top: 34px;
-
-}
-.footer-centre ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.footer-droite {
-    text-align: left;
-    margin-left: 150px;
-    padding-top: 46px;
-}
-.footer-droite i {
-    font-size: 20px;
-    font-weight: bold;
-    margin-left: 10px;
-}
-.Plogo {
-    display: inline-block;
-    padding: 3px;
-    transition: transform 0.3s ease;
-}
-
-.Plogo img {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-}
-
-.Plogo:hover {
-    transform: translateY(-4px);
-}
-
+/*partie gauche du footer*/
 .footer-gauche {
     margin-left: 100px;
     text-align: left;
 
 }
 
+/*texte LOGO dans la partie gauche du footer*/
 .footer-gauche h2 {
     font-size: 50px;
 }
 
+/*numéro de téléphone et texte "par mail"*/
 .footer-gauche span {
     margin: 0 25px 15px 5px;
 }
 
+/*texte "2023 Logo. Tous droits réservés."*/
 .mini-bas {
     font-size: 10px;
     text-align: center;
@@ -766,6 +761,8 @@ footer {
     position: absolute;
     bottom: 10px;
 }
+
+/*section dédiée au numéro de téléphone*/
 .Tel {
     border : 2px solid lightgray;
     border-radius: 8px;
@@ -775,11 +772,13 @@ footer {
     font-size: 16px;
 
 }
+
+/*icône de téléphone*/
 .Tel img {
     object-fit: contain;
 }
-.Tel  {}
 
+/*section "par mail"*/
 .mail{
     border : 2px solid black;
     border-radius: 8px;
@@ -788,11 +787,66 @@ footer {
     padding : 5px;
     font-size: 16px;
 }
+
+/*icône d'enveloppe*/
 .mail img {
     object-fit: contain;
+}
+
+/*partie centre du footer*/
+.footer-centre {
+    text-align: left;
+    margin-left: 50px;
+    padding-top: 34px;
 
 }
 
+/*ul dans le centre du footer*/
+.footer-centre ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*partie droite du footer*/
+.footer-droite {
+    text-align: left;
+    margin-left: 150px;
+    padding-top: 46px;
+}
+
+/*texte #enmodepartage*/
+.footer-droite i {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/*partie "partage" du texte "#enmodepartage"*/
+#partage{
+    color: red;
+}
+
+/*espace dédié aux logos à gauche du texte #enmodepartage*/
+.Plogo {
+    display: inline-block;
+    padding: 3px;
+    transition: transform 0.3s ease;
+}
+
+/*image des logos facebook et twitter*/
+.Plogo img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/*élévation des logos lorsque l'on passe la souris sur ces derniers*/
+.Plogo:hover {
+    transform: translateY(-4px);
+}
+
+/*section "votre mail"*/
 .email {
     display: flex;
     justify-content: left;
@@ -802,6 +856,7 @@ footer {
     max-width: 300px;
 }
 
+/*zone de texte*/
 .email input {
     flex: 1;
     border: none;
@@ -810,6 +865,7 @@ footer {
     padding: 10px;
 }
 
+/*bouton (flèche) dans la zone de texte*/
 .email button {
     background-color: transparent;
     border: none;
@@ -817,17 +873,16 @@ footer {
     padding: 0 10px;
 }
 
+/*icône de la flèche*/
 .email button img {
     width: 20px;
     height: 20px;
     transition: 0.5s ease-out;
 }
+
+/*déplacement de la flèche lorsque l'on passe la souris dessus*/
 .email button img:hover {
     transform: translateX(8px);
-}
-
-#partage{
-    color: red;
 }
 /*footer fin*/
 
