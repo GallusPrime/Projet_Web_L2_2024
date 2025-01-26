@@ -9,8 +9,8 @@
 </head>
 
 <body>
-  <header>
-    <div class="ensemble">
+  <header><!-- contient les deux parties du header (partie supérieur et partie inférieure) -->
+    <div class="ensemble"><!-- contient l'ensemble des informations dans la partie supérieure du header -->
     <div class="logo">
       LOGO
     </div>
@@ -31,18 +31,18 @@
         <br> Jeudi : 9:30 - 19:30
         <br> Vendredi : 9:30 - 19:30
         <br> Samedi : 9:30 - 19:30
-        <br> Dimanche : Fermé</p>
+        <br> Dimanche : Fermé</p> <!-- horaires par jour affiché lorsque l'on passe la souris sur la partie horaire -->
     </div>
       <div class="recherche">
     <div class="loupe">
       <label for="search"><img src="/public/Icon%20feather-search.svg" alt="recherche"> </label>
     </div>
       <div class="barre">
-        <input type="text" id="search" name="search" size="15"/>
+        <input type="text" id="search" name="search" size="15"/><!-- zone de texte affichée lorsque l'on passe la souris sur la loupe -->
       </div>
       </div>
     </div>
-    <div class="stvalentin">
+    <div class="stvalentin"><!-- partie inférieure -->
       Ouverture exceptionnelle le dimanche 12 février pour la Saint-Valentin
     </div>
   </header>
@@ -189,8 +189,7 @@
       </div>
     </section>
 
-
-    <section class="bar-fixé">
+    <section class="bar-fixé"><!-- contient le texte à la verticale ainsi que les icônes-->
       <div class="vertical-txt">#enmodepartage</div>
       <div class="icones">
     <span class="icone">
@@ -201,13 +200,12 @@
     </span>
       </div>
     </section>
-    <h2 class="jaunetitre" id="jaunetitre">#enmodetips</h2>
 
-
-    <section class="boitejaune">
+    <h2 class="jaunetitre" id="jaunetitre">#enmodetips</h2><!-- titre figurant au dessus de la boite jaune -->
+    <section class="boitejaune"> <!-- contient une zone de texte pour rentrer une adresse mail ainsi que du texte -->
       <h2>Infos & bons plans</h2>
       <form class="votreemail">
-        <input type="email" placeholder="Votre email"  required >
+        <input type="email" placeholder="Votre email"  required > <!-- zone de texte pour rentrer un email -->
         <button type="submit">
           <img src="public/arrow.svg" alt="Flèche">
         </button>
@@ -255,8 +253,8 @@
   </main>
 
 
-  <footer>
-    <div class="footer-gauche">
+  <footer><!-- contient les différentes parties du footer -->
+    <div class="footer-gauche"><!-- partie gauche du footer  -->
       <h2>LOGO</h2>
       <h3>Nom du logo</h3>
       <p>Toute l’adresse est là ou pas...</p>
@@ -264,7 +262,7 @@
       <p class="mail"><span><img src="public/mail.svg"></span>Par mail</p>
       <p class="mini-bas">2023 Logo. Tous droits réservés.</p>
     </div>
-    <div class="footer-centre">
+    <div class="footer-centre"><!-- partie centre du footer -->
       <h3>Nom logo et vous</h3>
       <ul>
         <li><a href="https://corporate.primark.com/fr-fr/a/a-propos/qui-sommes-nous"> Notre histoire </a></li>
@@ -281,13 +279,13 @@
         <li><a href="https://www.centre-commercial.fr/bay2/location-espace/"> Un local </a></li>
       </ul>
     </div>
-    <div class="footer-droite">
+    <div class="footer-droite"><!-- partie droite du footer -->
       <span class="Plogo"><a href="https://www.facebook.com/?locale=fr_FR/"> <img src="public/logo_facebook.svg"> </a></span>
       <span class="Plogo"><a href="https://x.com/"> <img src="public/logo_twitter.svg"> </a></span>
       <i>#enmode<span id="partage">partage</span></i>
       <h3><a href="https://www.info.gouv.fr/risques/reagir-en-cas-dattaque-terroriste"> Info & bons plans </a></h3>
       <form class="email">
-        <input type="email" placeholder="Votre email" required>
+        <input type="email" placeholder="Votre email" required> <!-- zone de texte pour rentrer une adresse mail -->
         <button type="submit">
           <a href="https://www.google.com/search?client=firefox-b-d&q=mail"> <img src="public/arrow.svg" alt="Flèche"> </a>
         </button>
